@@ -11,6 +11,20 @@
     --modal-color: #FCFCFC;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 p,
 h1,
 h2,
@@ -596,7 +610,6 @@ img{
 
 .modal{
     width: 408px;
-    height: 576px;
     background-color: var(--modal-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -605,6 +618,7 @@ img{
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px;
 }
 
 .modal-close{
@@ -614,6 +628,7 @@ img{
     position: absolute;
     top: 24px;
     left: 360px;
+    
 }
 
 .modal-close-btn{
@@ -626,6 +641,13 @@ img{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus{
+    background-color: var(--hover-color);
+    fill: var(--white-color);
 }
 
 .is-hidden{
@@ -636,4 +658,153 @@ img{
 
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--first-main-color);
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+.modal-field{
+    margin-bottom: 8px;
+}
+
+.input-wrap{
+    position: relative;
+}
+
+.modal-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding-left: 38px;
+    font-size: 14px;
+    color: var(--first-main-color);
+    outline: transparent;
+}
+
+.modal-input-icon{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--first-main-color);
+}
+
+.modal-input:focus{
+    border-color: var(--third-main-color);
+}
+
+.modal-input:focus + .modal-input-icon{
+    fill: var(--third-main-color);
+}
+
+.modal-label-text{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--helper-text-color);
+    margin-bottom: 4px;
+}
+
+.modal-textarea{
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
+    padding: 8px 16px;
+    outline: transparent;
+    font-size: 14px;
+}
+
+.modal-textarea:focus{
+    border-color: var(--third-main-color);
+}
+
+.check-text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    margin-bottom: 24px;
+    margin-top: 16px;
+}
+
+.check-text span{
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid var(--first-main-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.text-privacy{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #757575;
+    
+}
+
+.modal-check:checked + .check-text span {
+    background-color: var(--third-main-color);
+    border: none;
+    fill: #f4f4fd;
+}
+
+.modal-check:focus + .check-text span {
+    border-color: var(--third-main-color);
+}
+
+.privacy-link{
+    color: var(--third-main-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-link:hover,
+.privacy-link:focus {
+    color: var(--hover-color);
+}
+
+.modal-btn{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    display: block;
+    color: var(--white-color);
+    background-color: var(--third-main-color);
+    cursor: pointer;
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--hover-color);
 }
