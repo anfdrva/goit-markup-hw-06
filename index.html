@@ -388,17 +388,23 @@
         </div>
         <div class="footer-sub">
           <p class="footer-sub-title">Subscribe</p>
-          <label class="footer-sub-email" for="sub-email"></label>
-          <div class="input-wrap">
-              <input
-                class="sub-email-input"
-                id="sub-email"
-                name="sub-email"
-                type="email"
-                placeholder="E-mail"
-              />
+          <form class="footer-sub-content">
+            <label class="footer-sub-email" for="sub-email"></label>
+            <input
+              class="sub-email-input"
+              id="sub-email"
+              name="sub-email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-sub-btn">
+              Subscribe
+              <svg class="footer-sub-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
         </div>
-        <button class="footer-sub-btn">Subscribe</button>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>

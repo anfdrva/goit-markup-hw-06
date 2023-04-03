@@ -485,6 +485,70 @@ img{
     background-color: var(--green-color);
 }
 
+.footer-sub-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+}
+
+.footer-sub{
+    margin-left: auto;
+}
+
+.footer-sub-content{
+    display: flex;
+    justify-content: center;
+}
+
+.sub-email-input{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    height: 40px;
+    min-width: 264px;
+    background-color: transparent;
+    outline: transparent;
+
+    padding: 8px 16px;
+    font-size: 14px;
+    color: var(--helper-text-color);
+}
+
+.sub-email-input:focus{
+    border-color: var(--hover-color);
+}
+
+.footer-sub-btn{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white-color);
+    background-color: var(--third-main-color);
+    cursor: pointer;
+    padding: 8px 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-sub-icon{
+    fill: var(--white-color);
+}
+
+.footer-sub-btn:hover,
+.footer-sub-btn:focus{
+    background-color: var(--hover-color);
+}
+
+
 /* ------------------PORTFOLIO-------------------- */
 
 .portfolio{
@@ -628,7 +692,6 @@ img{
     position: absolute;
     top: 24px;
     left: 360px;
-    
 }
 
 .modal-close-btn{
@@ -727,6 +790,7 @@ img{
     padding: 8px 16px;
     outline: transparent;
     font-size: 14px;
+    display: block;
 }
 
 .modal-textarea:focus{
@@ -752,7 +816,6 @@ img{
     justify-content: center;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
 
 .text-privacy{
@@ -761,13 +824,12 @@ img{
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #757575;
-    
 }
 
 .modal-check:checked + .check-text span {
     background-color: var(--third-main-color);
     border: none;
-    fill: #f4f4fd;
+    fill: var(--cloud-color);
 }
 
 .modal-check:focus + .check-text span {
